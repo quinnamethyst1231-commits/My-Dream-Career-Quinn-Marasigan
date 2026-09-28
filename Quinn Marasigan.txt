@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Your Name Here">
+<meta name="description" content="A personal webpage about my dream career as a pediatrician: why I chose it, the skills and education it takes, and my future goals.">
+<title>My Dream Career: Pediatrician by Quinn Amethyst Marasigan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;0,700;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ---------- Design tokens ---------- */
+  :root {
+    --color-bg: #FAF7F0;
+    --color-bg-alt: #EAF2EE;
+    --color-primary: #1E4B45;
+    --color-primary-dark: #163B36;
+    --color-accent: #E3A857;
+    --color-teal: #4F9C8F;
+    --color-text: #33413E;
+    --color-white: #FFFFFF;
+    --font-head: 'Literata', Georgia, 'Times New Roman', serif;
+    --font-body: 'Nunito', Verdana, Arial, sans-serif;
+  }
+
+  /* ---------- Reset & base ---------- */
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  h1, h2 {
+    font-family: var(--font-head);
+    color: var(--color-primary);
+    line-height: 1.15;
+    margin-top: 0;
+  }
+  p { margin: 0 0 1em 0; }
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background-color: var(--color-primary);
+    background-image: linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    text-align: center;
+    padding: 72px 24px 64px;
+    animation: fade-up 0.8s ease-out;
+  }
+  .hero h1 {
+    color: var(--color-white);
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .hero .role {
+    font-family: var(--font-head);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    margin: 0 0 18px 0;
+  }
+  .hero .tagline {
+    max-width: 480px;
+    margin: 0 auto;
+    color: #DCEAE6;
+    font-size: 1.05rem;
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero { animation: none; }
+  }
+
+  /* ---------- Section bands ---------- */
+  .band { padding: 48px 0; }
+  .band-cream  { background-color: var(--color-bg); }
+  .band-sage   { background-color: var(--color-bg-alt); }
+  .band-teal   { background-color: var(--color-teal); color: var(--color-white); }
+  .band-teal h2 { color: var(--color-white); }
+  .band-teal a { color: var(--color-white); }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-left: 16px;
+    border-left: 5px solid var(--color-accent);
+    margin-bottom: 18px;
+  }
+  .band-teal h2 { border-left-color: var(--color-white); }
+
+  /* ---------- Lists ---------- */
+  ul { margin: 0; padding: 0; list-style: none; }
+  .skills-list, .resp-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+  }
+  .skills-list li, .resp-list li {
+    position: relative;
+    padding-left: 22px;
+  }
+  .skills-list li::before, .resp-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+  }
+  .resp-list li::before { background-color: var(--color-teal); }
+
+  /* ---------- Career image ---------- */
+  figure { margin: 0; }
+  figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 26px rgba(30, 75, 69, 0.22);
+  }
+  figcaption {
+    margin-top: 12px;
+    font-size: 0.92rem;
+    color: var(--color-teal);
+    font-style: italic;
+  }
+
+  /* ---------- Future goal callout ---------- */
+  .goal-box {
+    background-color: var(--color-white);
+    border-left: 5px solid var(--color-accent);
+    border-radius: 6px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 14px rgba(30, 75, 69, 0.08);
+  }
+
+  /* ---------- Links ---------- */
+  a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-underline-offset: 3px;
+  }
+  a:hover { color: var(--color-accent); }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background-color: var(--color-primary-dark);
+    color: #B9CFC9;
+    text-align: center;
+    padding: 22px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 560px) {
+    .hero { padding: 52px 20px 44px; }
+    .hero h1 { font-size: 2rem; }
+    .hero .role { font-size: 1.3rem; }
+    .skills-list, .resp-list { grid-template-columns: 1fr; }
+    .band { padding: 36px 0; }
+  }
+</style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>My Dream Career</h1>
+    <p class="role">Pediatrician</p>
+    <p class="tagline">Caring for children, one checkup at a time.</p>
+  </header>
+
+  <main>
+
+    <section id="introduction" class="band band-cream">
+      <div class="wrap">
+        <h2>Introduction</h2>
+        <p>A pediatrician is a medical doctor who specializes in the health and well-being of infants, children, and teenagers. From newborn checkups to treating everyday illnesses and tracking growth milestones, a pediatrician is often the first doctor a child ever knows &mdash; and sometimes the person a worried parent trusts most. Out of every path in medicine, this is the one I keep coming back to.</p>
+      </div>
+    </section>
+
+    <section id="why" class="band band-sage">
+      <div class="wrap">
+        <h2>Why I Chose This Career</h2>
+        <p>Ever since I was young, I have loved being around children, from my younger cousins to the kids in my neighborhood. I still remember how gentle and patient my own pediatrician was when I was scared of getting a vaccine shot, and I want to give that same comfort to another child one day. Science has always been one of my favorite subjects, especially biology, so a career that combines my love for kids with my curiosity about the human body feels like the perfect fit. I also want a job where I can see the direct result of my work, and I cannot think of anything more rewarding than sending a healthier, happier child home to their family.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="band band-cream">
+      <div class="wrap">
+        <h2>Skills Needed</h2>
+        <ul class="skills-list">
+          <li>Strong communication, to explain things clearly to both children and worried parents</li>
+          <li>Patience and a calm temperament, especially with scared or crying patients</li>
+          <li>Empathy and compassion, to comfort children and reassure their families</li>
+          <li>Sharp attention to detail, for spotting symptoms that could signal something serious</li>
+          <li>Problem-solving, to figure out what is wrong even when a young patient can't explain it</li>
+          <li>Physical and mental stamina, for long shifts and emotionally demanding days</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education" class="band band-sage">
+      <div class="wrap">
+        <h2>Education &amp; Qualifications</h2>
+        <p>Becoming a pediatrician is a long road, but every step builds the knowledge needed to care for children safely. It starts with a four-year bachelor's degree, usually with a strong foundation in biology and chemistry. Next comes four years of medical school to earn a Doctor of Medicine (MD) degree, followed by a three-year pediatric residency where new doctors train directly with patients in hospitals and clinics. Finally, pediatricians must pass a licensing exam and can choose to become board-certified, showing that they meet the highest standards of pediatric care. Altogether, it takes more than a decade of study and training, but I see that time as an investment in every child I will one day help.</p>
+      </div>
+    </section>
+
+    <section id="responsibilities" class="band band-cream">
+      <div class="wrap">
+        <h2>Career Responsibilities</h2>
+        <ul class="resp-list">
+          <li>Performing routine checkups and tracking a child's growth and development</li>
+          <li>Diagnosing and treating common childhood illnesses, from ear infections to asthma</li>
+          <li>Giving vaccines and keeping track of each child's immunization schedule</li>
+          <li>Educating parents about nutrition, safety, and healthy habits at home</li>
+          <li>Referring patients to specialists when a condition needs more advanced care</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="career-image" class="band band-sage">
+      <div class="wrap">
+        <h2>Career Image</h2>
+        <figure>
+          <img
+            src="https://tse1.mm.bing.net/th/id/OIP.D4zIX_vxsIrr0tvdLDu7OgHaFy?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="A doctor gently examines a young child during a health checkup"
+            title="Me in the future hopefully"
+            width="640" height="597"
+            loading="lazy">
+          <figcaption>
+      </div>
+    </section>
+
+    <section id="goal" class="band band-cream">
+      <div class="wrap">
+        <h2>My Future Goal</h2>
+        <div class="goal-box">
+          <p style="margin:0;">My goal is to become a compassionate pediatrician who works in a community clinic, where many families may not have easy access to quality healthcare. I want every child who walks into my office to feel safe, heard, and cared for, no matter their background. Someday, I also hope to mentor students who are interested in medicine, the same way my own pediatrician once inspired me.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="band band-teal">
+      <div class="wrap">
+        <h2>Useful Link</h2>
+        <p>To learn more about pediatric care, visit the <a href="https://www.aap.org/" target="_blank" rel="noopener noreferrer" title="American Academy of Pediatrics official website">American Academy of Pediatrics</a>. You can also read about the career outlook for physicians on the <a href="https://www.bls.gov/ooh/healthcare/physicians-and-surgeons.htm" target="_blank" rel="noopener noreferrer" title="U.S. Bureau of Labor Statistics: Physicians and Surgeons">U.S. Bureau of Labor Statistics</a> website.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Created by <strong>[Your Name]</strong> &middot; Basic HTML &amp; CSS Project</p>
+  </footer>
+
+</body>
+</html>
